@@ -31,8 +31,8 @@
 #define SRAM1_BASE_ADDRESS			(0x20000000UL)  // 112 KB
 #define SRAM2_BASE_ADDRESS			(0x2001C000UL) // 16 KB
 #define SRAM3_BASE_ADDRESS			(0x20020000UL) // 64 KB
-#define ROM							(0x1FFF0000UL)
-#define SRAM						SRAM1_BASE_ADDRESS
+#define ROM					(0x1FFF0000UL)
+#define SRAM					SRAM1_BASE_ADDRESS
 
 /*
  * base address of bus domains
