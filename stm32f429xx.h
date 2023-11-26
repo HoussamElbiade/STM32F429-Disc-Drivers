@@ -60,12 +60,12 @@
 #define RTC_BASE_ADDRESS			(APB1_BASE_ADDRESS + 0x2800UL)
 #define WWDG_BASE_ADDRESS			(APB1_BASE_ADDRESS + 0x2C00UL)
 #define IWDG_BASE_ADDRESS			(APB1_BASE_ADDRESS + 0x3000UL)
-#define I2S2ext_BASE_ADDRESS		(APB1_BASE_ADDRESS + 0x3400UL)
+#define I2S2ext_BASE_ADDRESS			(APB1_BASE_ADDRESS + 0x3400UL)
 #define SPI2_BASE_ADDRESS			(APB1_BASE_ADDRESS + 0x3800UL)
 #define I2S2_BASE_ADDRESS			(APB1_BASE_ADDRESS + 0x3800UL)
 #define SPI3_BASE_ADDRESS			(APB1_BASE_ADDRESS + 0x3C00UL)
 #define I2S3_BASE_ADDRESS			(APB1_BASE_ADDRESS + 0x3C00UL)
-#define I2S3ext_BASE_ADDRESS		(APB1_BASE_ADDRESS + 0x4000UL)
+#define I2S3ext_BASE_ADDRESS			(APB1_BASE_ADDRESS + 0x4000UL)
 #define USART2_BASE_ADDRESS			(APB1_BASE_ADDRESS + 0x4400UL)
 #define USART3_BASE_ADDRESS			(APB1_BASE_ADDRESS + 0x4800UL)
 #define UART4_BASE_ADDRESS			(APB1_BASE_ADDRESS + 0x4C00UL)
@@ -88,14 +88,14 @@
 #define TIM8_BASE_ADDRESS			(APB2_BASE_ADDRESS + 0x0400UL)
 #define USART1_BASE_ADDRESS			(APB2_BASE_ADDRESS + 0x1000UL)
 #define USART6_BASE_ADDRESS			(APB2_BASE_ADDRESS + 0x1400UL)
-#define ADC1_OFFSET					(0x000UL)
-#define ADC2_OFFSET					(0x100UL)
-#define ADC3_OFFSET					(0x200UL)
+#define ADC1_OFFSET				(0x000UL)
+#define ADC2_OFFSET				(0x100UL)
+#define ADC3_OFFSET				(0x200UL)
 #define ADC_COMM_REG_OFFSET			(0x300UL)
 #define ADC1_BASE_ADDRESS			(APB2_BASE_ADDRESS + 0x2000UL + ADC1_OFFSET)
 #define ADC2_BASE_ADDRESS			(APB2_BASE_ADDRESS + 0x2000UL + ADC2_OFFSET)
 #define ADC3_BASE_ADDRESS			(APB2_BASE_ADDRESS + 0x2000UL + ADC3_OFFSET)
-#define ADC_COMM_REG_BASE_ADDRESS	(APB2_BASE_ADDRESS + 0x2000UL + ADC_COMM_REG_OFFSET)
+#define ADC_COMM_REG_BASE_ADDRESS		(APB2_BASE_ADDRESS + 0x2000UL + ADC_COMM_REG_OFFSET)
 #define SDIO_BASE_ADDRESS			(APB2_BASE_ADDRESS + 0x2C00UL)
 #define SPI1_BASE_ADDRESS			(APB2_BASE_ADDRESS + 0x3000UL)
 #define SPI4_BASE_ADDRESS			(APB2_BASE_ADDRESS + 0x3400UL)
@@ -107,7 +107,7 @@
 #define SPI5_BASE_ADDRESS			(APB2_BASE_ADDRESS + 0x5000UL)
 #define SPI6_BASE_ADDRESS			(APB2_BASE_ADDRESS + 0x5400UL)
 #define SAI1_BASE_ADDRESS			(APB2_BASE_ADDRESS + 0x5800UL)
-#define LCD_TFT_BASE_ADDRESS		(APB2_BASE_ADDRESS + 0x6800UL)
+#define LCD_TFT_BASE_ADDRESS			(APB2_BASE_ADDRESS + 0x6800UL)
 
 
 /*
@@ -127,17 +127,17 @@
 #define CRC_BASE_ADDRESS			(AHB1_BASE_ADDRESS + 0x3000UL)
 #define RCC_BASE_ADDRESS			(AHB1_BASE_ADDRESS + 0x3800UL)
 #define FIR_BASE_ADDRESS			(AHB1_BASE_ADDRESS + 0x3C00UL) // Flash interface register
-#define BKPSRAM_BASE_ADDRESS		(AHB1_BASE_ADDRESS + 0x4000UL)
+#define BKPSRAM_BASE_ADDRESS			(AHB1_BASE_ADDRESS + 0x4000UL)
 #define DMA1_BASE_ADDRESS			(AHB1_BASE_ADDRESS + 0x6000UL)
 #define DMA2_BASE_ADDRESS			(AHB1_BASE_ADDRESS + 0x6400UL)
-#define ETHERNET_MAC_BASE_ADDRESS	(AHB1_BASE_ADDRESS + 0x8000UL)
+#define ETHERNET_MAC_BASE_ADDRESS		(AHB1_BASE_ADDRESS + 0x8000UL)
 #define DMA2D_BASE_ADDRESS			(AHB1_BASE_ADDRESS + 0xB000UL)
-#define USB_OTG_HS_BASE_ADDRESS		(AHB1_BASE_ADDRESS + 0x20000UL) // base address = 0x40040000 - 0x40020000
+#define USB_OTG_HS_BASE_ADDRESS			(AHB1_BASE_ADDRESS + 0x20000UL) // base address = 0x40040000 - 0x40020000
 
 /*
  * AHB2 peripherals base addresses
  */
-#define USB_OTG_FS_BASE_ADDRESS		(AHB2_BASE_ADDRESS + 0x00000UL)
+#define USB_OTG_FS_BASE_ADDRESS			(AHB2_BASE_ADDRESS + 0x00000UL)
 #define DCMI_BASE_ADDRESS			(AHB2_BASE_ADDRESS + 0x50000UL)
 #define CRYP_BASE_ADDRESS			(AHB2_BASE_ADDRESS + 0x60000UL)
 #define HASH_BASE_ADDRESS			(AHB2_BASE_ADDRESS + 0x60400UL)
@@ -642,33 +642,33 @@ typedef struct {
  */
 
 /* GPIO peripherals */
-#define GPIOA_PCLK_EN()	(RCC->AHB1ENR |= (1 << 0))
-#define GPIOB_PCLK_EN()	(RCC->AHB1ENR |= (1 << 1))
-#define GPIOC_PCLK_EN()	(RCC->AHB1ENR |= (1 << 2))
-#define GPIOD_PCLK_EN()	(RCC->AHB1ENR |= (1 << 3))
-#define GPIOE_PCLK_EN()	(RCC->AHB1ENR |= (1 << 4))
-#define GPIOF_PCLK_EN()	(RCC->AHB1ENR |= (1 << 5))
-#define GPIOG_PCLK_EN()	(RCC->AHB1ENR |= (1 << 6))
-#define GPIOH_PCLK_EN()	(RCC->AHB1ENR |= (1 << 7))
-#define GPIOI_PCLK_EN()	(RCC->AHB1ENR |= (1 << 8))
-#define GPIOJ_PCLK_EN()	(RCC->AHB1ENR |= (1 << 9))
-#define GPIOK_PCLK_EN()	(RCC->AHB1ENR |= (1 << 10))
+#define GPIOA_PCLK_EN()			(RCC->AHB1ENR |= (1 << 0))
+#define GPIOB_PCLK_EN()			(RCC->AHB1ENR |= (1 << 1))
+#define GPIOC_PCLK_EN()			(RCC->AHB1ENR |= (1 << 2))
+#define GPIOD_PCLK_EN()			(RCC->AHB1ENR |= (1 << 3))
+#define GPIOE_PCLK_EN()			(RCC->AHB1ENR |= (1 << 4))
+#define GPIOF_PCLK_EN()			(RCC->AHB1ENR |= (1 << 5))
+#define GPIOG_PCLK_EN()			(RCC->AHB1ENR |= (1 << 6))
+#define GPIOH_PCLK_EN()			(RCC->AHB1ENR |= (1 << 7))
+#define GPIOI_PCLK_EN()			(RCC->AHB1ENR |= (1 << 8))
+#define GPIOJ_PCLK_EN()			(RCC->AHB1ENR |= (1 << 9))
+#define GPIOK_PCLK_EN()			(RCC->AHB1ENR |= (1 << 10))
 
 /*
  * Clock disable for MCU peripherals
  */
 /*GPIO peripherals*/
-#define GPIOA_PCLK_DI()	(RCC->AHB1ENR &= ~(0 << 0))
-#define GPIOB_PCLK_DI()	(RCC->AHB1ENR &= ~(0 << 1))
-#define GPIOC_PCLK_DI()	(RCC->AHB1ENR &= ~(0 << 2))
-#define GPIOD_PCLK_DI()	(RCC->AHB1ENR &= ~(0 << 3))
-#define GPIOE_PCLK_DI()	(RCC->AHB1ENR &= ~(0 << 4))
-#define GPIOF_PCLK_DI()	(RCC->AHB1ENR &= ~(0 << 5))
-#define GPIOG_PCLK_DI()	(RCC->AHB1ENR &= ~(0 << 6))
-#define GPIOH_PCLK_DI()	(RCC->AHB1ENR &= ~(0 << 7))
-#define GPIOI_PCLK_DI()	(RCC->AHB1ENR &= ~(0 << 8))
-#define GPIOJ_PCLK_DI()	(RCC->AHB1ENR &= ~(0 << 9))
-#define GPIOK_PCLK_DI()	(RCC->AHB1ENR &= ~(0 << 10))
+#define GPIOA_PCLK_DI()			(RCC->AHB1ENR &= ~(0 << 0))
+#define GPIOB_PCLK_DI()			(RCC->AHB1ENR &= ~(0 << 1))
+#define GPIOC_PCLK_DI()			(RCC->AHB1ENR &= ~(0 << 2))
+#define GPIOD_PCLK_DI()			(RCC->AHB1ENR &= ~(0 << 3))
+#define GPIOE_PCLK_DI()			(RCC->AHB1ENR &= ~(0 << 4))
+#define GPIOF_PCLK_DI()			(RCC->AHB1ENR &= ~(0 << 5))
+#define GPIOG_PCLK_DI()			(RCC->AHB1ENR &= ~(0 << 6))
+#define GPIOH_PCLK_DI()			(RCC->AHB1ENR &= ~(0 << 7))
+#define GPIOI_PCLK_DI()			(RCC->AHB1ENR &= ~(0 << 8))
+#define GPIOJ_PCLK_DI()			(RCC->AHB1ENR &= ~(0 << 9))
+#define GPIOK_PCLK_DI()			(RCC->AHB1ENR &= ~(0 << 10))
 
 
 /*
@@ -687,27 +687,27 @@ typedef struct {
 #define GPIOK_REG_RST()			do{RCC->AHB1RSTR |= (1 << 10); RCC->AHB1RSTR &= ~(1 << 10); }while(0)
 
 #define GPIO_PORT_EXTI_VALUE(x)	((x == GPIOA)?0:\
-								(x == GPIOB)?1:\
-								(x == GPIOC)?2:\
-								(x == GPIOD)?3:\
-								(x == GPIOE)?4:\
-								(x == GPIOF)?5:\
-								(x == GPIOG)?6:\
-								(x == GPIOH)?7:\
-								(x == GPIOI)?8:\
-								(x == GPIOJ)?9:\
-								(x == GPIOK)?10:0)
+				(x == GPIOB)?1:\
+				(x == GPIOC)?2:\
+				(x == GPIOD)?3:\
+				(x == GPIOE)?4:\
+				(x == GPIOF)?5:\
+				(x == GPIOG)?6:\
+				(x == GPIOH)?7:\
+				(x == GPIOI)?8:\
+				(x == GPIOJ)?9:\
+				(x == GPIOK)?10:0)
 
 
 /* EXTI Peripheral Macro definition*/
-#define EXTI					((EXTI_RegDef_t*)EXTI_BASE_ADDRESS)
+#define EXTI				((EXTI_RegDef_t*)EXTI_BASE_ADDRESS)
 
 /*EXTI IRQ number definition*/
-#define IRQ_EXTI_0					6
-#define IRQ_EXTI_1					7
-#define IRQ_EXTI_2					8
-#define IRQ_EXTI_3					9
-#define IRQ_EXTI_4					10
+#define IRQ_EXTI_0				6
+#define IRQ_EXTI_1				7
+#define IRQ_EXTI_2				8
+#define IRQ_EXTI_3				9
+#define IRQ_EXTI_4				10
 #define IRQ_EXTI_9_5				23
 #define IRQ_EXTI_15_10				40
 
@@ -716,19 +716,19 @@ typedef struct {
 #define SYSCFG					((SYSCFG_RegDef_t*)SYSCFG_BASE_ADDRESS)
 
 /*SYSCFG Clock Enable Macro*/
-#define SYSCFG_REG_EN()			(RCC->APB2ENR |= (1 << 14))
+#define SYSCFG_REG_EN()				(RCC->APB2ENR |= (1 << 14))
 
 
 
 /*
  * Global macros
  */
-#define ENABLE			1
-#define DISABLE			0
-#define SET				ENABLE
-#define RESET			DISABLE
-#define GPIO_PIN_SET	SET
-#define GPIO_PIN_RESET	RESET
+#define ENABLE					1
+#define DISABLE					0
+#define SET					ENABLE
+#define RESET					DISABLE
+#define GPIO_PIN_SET				SET
+#define GPIO_PIN_RESET				RESET
 
 
 #endif /* INC_STM32F429XX_H_ */
